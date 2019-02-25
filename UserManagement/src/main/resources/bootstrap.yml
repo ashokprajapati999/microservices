@@ -1,11 +1,18 @@
-#spring.data.mongodb.authentication-database=
-#spring.data.mongodb.field-naming-strategy=
-#spring.data.mongodb.grid-fs-database=
-#spring.data.mongodb.username=
-#spring.data.mongodb.password=
-spring.data.mongodb.repositories.type=auto
-#spring.data.mongodb.field-naming-strategy=org.springframework.data.mongodb.core.mapping.SnakeCaseFieldNamingStrategy
-spring.data.mongodb.host=localhost
-spring.data.mongodb.port=27017
-spring.data.mongodb.database=microservice
-spring.data.mongodb.uri=mongodb://localhost:27017/microservice
+server.port : 8080
+spring:
+  cloud:
+    config:
+      name: microservice-config
+      uri: http://localhost:8888/
+      username: ashokprajapati999@gmail.com
+      password: Java@1234
+  data:
+    mongodb:
+      database: microservice
+      host: localhost
+      port: '27017'
+      repositories:
+        type: auto
+      uri: mongodb://localhost:27017/microservice
+  profiles:
+    active: PROD

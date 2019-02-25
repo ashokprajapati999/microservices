@@ -1,6 +1,8 @@
 package com.akp.usermgmt.endpoint;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,10 +14,19 @@ import com.akp.usermgmt.service.UserMgmtService;
 
 @RestController
 @RequestMapping("/users")
+@RefreshScope
 public class UserMgmtEndpoint {
 	
 	@Autowired
-	UserMgmtService userMgmtService;
+	private UserMgmtService userMgmtService;
+	
+	@Value("${message}")
+	private String message;
+	
+	@RequestMapping(method = RequestMethod.GET, produces = "application/json")
+	public String welcome() {
+		return message;
+	}
 	
 	@RequestMapping(value="/{userId}", method = RequestMethod.GET, produces = "application/json")
 	public DemoUser findUserById(@PathVariable("userId") String userId) {
