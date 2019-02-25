@@ -5,10 +5,10 @@ spring:
       server:
         git:
           uri : https://github.com/ashokprajapati999/Config-repo/
-          username: ashokprajapati999@gmail.com
-          password: Java@1234
+          username: xxxxxxxxx
+          password: xxxxxxxxx
           force-pull: true
 
-spring.security.user.name: ashokprajapati999@gmail.com
-spring.security.user.password: Java@1234
+spring.security.user.name: config_user
+spring.security.user.password: Lwre15qlw@
 

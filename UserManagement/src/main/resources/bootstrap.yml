@@ -4,13 +4,13 @@ spring:
     config:
       name: microservice-config
       uri: http://localhost:8888/
-      username: ashokprajapati999@gmail.com
-      password: Java@1234
+      username: config_user
+      password: Lwre15qlw@
   data:
     mongodb:
       database: microservice
       host: localhost
-      port: '27017'
+      port: 27017
       repositories:
         type: auto
       uri: mongodb://localhost:27017/microservice
