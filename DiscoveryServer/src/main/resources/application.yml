@@ -1,0 +1,8 @@
+spring.application.name: discovery-server
+server.port: 8089
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

@@ -16,3 +16,8 @@ spring:
       uri: mongodb://localhost:27017/microservice
   profiles:
     active: PROD
+  application.name: UserManagementService
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8089/eureka
