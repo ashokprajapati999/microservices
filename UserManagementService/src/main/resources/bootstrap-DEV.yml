@@ -1,0 +1,20 @@
+server.port : 8080
+spring:
+  cloud:
+    config:
+      name: microservice-config
+      uri: http://localhost:8888/
+      username: config_user
+      password: Lwre15qlw@
+  data:
+    mongodb:
+      database: microservice_db
+      host: localhost
+      port: 27017
+      repositories:
+        type: auto
+      uri: mongodb://localhost:27017/microservice_db
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8089/eureka

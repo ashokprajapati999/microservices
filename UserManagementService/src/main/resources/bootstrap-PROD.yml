@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      name: microservice-config
+      uri: https://spring-cloud-config.cfapps.io/
+      username: config_user
+      password: Lwre15qlw@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://spring-discovery-server.cfapps.io/eureka
